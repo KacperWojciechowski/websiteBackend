@@ -45,13 +45,13 @@ state "10. File operations" as Lesson_10 #YellowGreen
 state "10.1. Advanced file operations (*)" as Lesson_10_1
 state "11.3. Structure\nmemory concerns (*)" as Lesson_11_3
 
-state "11.1. Default values (*)" as Lesson_11_1
 state "11.2. Structure data\naccess (*)" as Lesson_11_2
 state "11. Structures" as Lesson_11 #YellowGreen
 state "9. Enumeration types" as Lesson_9 #YellowGreen
 state "9.1. In-depth enums (*)" as Lesson_9_1
 
 state "12. Namespaces" as Lesson_12 #YellowGreen
+state "11.1. Default values (*)" as Lesson_11_1
 state "11.4. In-depth look\ninto structures (*)" as Lesson_11_4
 state "12.1. Anonymous\nnamespaces (*)" as Lesson_12_1
 state "13. Access to original data" as Lesson_13 #YellowGreen
@@ -75,7 +75,8 @@ state "16. OOP Data Management\nConcepts" as Lesson_16 #YellowGreen
 state "15.2. Class performance optimization (*)" as Lesson_15_2
 
 state "17. Advanced access\nof class contents" as Lesson_17 #YellowGreen
-state "17.1 Making class compliant\nwith advanced language\nfeatures (*)" as Lesson_17_1
+state "17.1. Making class compliant\nwith advanced language\nfeatures (*)" as Lesson_17_1
+state "17.2. Memory access to class content (*)" as Lesson_17_2
 
 state "18. Const-suitable classes" as Lesson_18 #YellowGreen
 state "18.1. Advanced object\nconstruction (*)" as Lesson_18_1
@@ -85,16 +86,35 @@ state "19.1. Multiple inheritance (*)" as Lesson_19_1
 state "19. Inheritance" as Lesson_19 #YellowGreen
 state "20. Polymorphism" as Lesson_20 #YellowGreen
 
-state "22.3. Templates vs codebase (*)" as Lesson_22_3
 state "21. Error handling" as Lesson_21 #YellowGreen
-state "21.1. Advanced\nerror\nhandling (*)" as Lesson_21_1
+state "21.1. Advanced\nerror handling (*)" as Lesson_21_1
 state "20.1. Advanced\npolymorphism\nconcepts (*)" as Lesson_20_1
 state "20.2. Advanced operator\noverloading (*)" as Lesson_20_2
 state "20.3. Improving\nreadability (*)" as Lesson_20_3
+state "20.4. Design Patterns" as Lesson_20_4 #YellowGreen
 
 state "22. Templates" as Lesson_22 #YellowGreen
 state "22.1. Advanced template\nconcepts (*)" as Lesson_22_1
 state "22.2. Adaptive templates (*)" as Lesson_22_2
+state "22.3. Templates vs codebase (*)" as Lesson_22_3
+
+state "23. STL - Standard Template Library" as Lesson_23 #YellowGreen
+state "23.1. Useful\nstandard libraries (*)" as Lesson_23_1
+state "23.2. Popular\nthird-party libraries (*)" as Lesson_23_2
+state "24. Lambdas and\nHigher Order Functions" as Lesson_24 #YellowGreen
+state "24.1. Storing functions (*)" as Lesson_24_1
+state "24.2. Transforming data (*)" as Lesson_24_2
+
+state "25. Concurrency" as Lesson_25 #YellowGreen
+state "25.1. In-depth concurrency" as Lesson_25_1 #YellowGreen
+state "25.2. Asynchronous programming" as Lesson_25_2 #YellowGreen
+state "26. Sharing resources\nbetween threads" as Lesson_26 #YellowGreen
+state "26.1. Synchronized types (*)" as Lesson_26_1
+
+state "27. Resolving problems\nwith concurrency" as Lesson_27 #YellowGreen
+
+state "28. Interacting with the OS" as Lesson_28 #YellowGreen
+
 
 /' ------------------------------ State connections ------------------------------'/
 
@@ -147,13 +167,13 @@ Lesson_10 -right[dashed]-> Lesson_10_1
 
 Lesson_11 -down-> Lesson_12
 Lesson_11 -down[dashed]-> Lesson_11_1
-Lesson_11 -up[dashed]-> Lesson_11_2
+Lesson_11 -down[dashed]-> Lesson_11_2
 Lesson_11 -left[dashed]-> Lesson_11_3
 Lesson_11 -right[dashed]-> Lesson_11_4
 Lesson_11 -right[dashed]-> Lesson_11_5
 
 Lesson_12 -down-> Lesson_13
-Lesson_12 -right[dashed]-> Lesson_12_1
+Lesson_12 -left[dashed]-> Lesson_12_1
 
 Lesson_13 -down->Lesson_14
 Lesson_13 -left[dashed]->Lesson_13_1
@@ -173,6 +193,7 @@ Lesson_16 -down-> Lesson_17
 
 Lesson_17 -down-> Lesson_18
 Lesson_17 -right[dashed]-> Lesson_17_1
+Lesson_17 -left[dashed]-> Lesson_17_2
 
 Lesson_18 -down-> Lesson_19
 Lesson_18 -left[dashed]-> Lesson_18_1
@@ -189,9 +210,27 @@ Lesson_20 -right[dashed]-> Lesson_20_3
 Lesson_21 -down-> Lesson_22
 Lesson_21 -left[dashed]-> Lesson_21_1
 
-Lesson_22 -right[dashed]->Lesson_22_1
-Lesson_22 -left[dashed]->Lesson_22_2
-Lesson_22 -down[dashed]->Lesson_22_3
+Lesson_22 -down->Lesson_23
+Lesson_22 -down[dashed]-> Lesson_22_1
+Lesson_22 -left[dashed]-> Lesson_22_2
+Lesson_22 -right[dashed]-> Lesson_22_3
+
+Lesson_23 -down-> Lesson_24
+Lesson_23 -right[dashed]-> Lesson_23_1
+Lesson_23 -left[dashed]-> Lesson_23_2
+
+Lesson_24 -down-> Lesson_25
+Lesson_24 -left[dashed]-> Lesson_24_1
+Lesson_24 -right[dashed]-> Lesson_24_2
+
+Lesson_25 -down-> Lesson_26
+Lesson_25 -left-> Lesson_25_1
+Lesson_25 -right-> Lesson_25_2
+
+Lesson_26 -down-> Lesson_27
+Lesson_26 -right[dashed]->Lesson_26_1
+
+Lesson_27 -down-> Lesson_28
 
 /' ------------------------------ Content of the lessons ------------------------------'/
 
@@ -329,6 +368,7 @@ Lesson_7_1 : - Tail Recursion Optimization (TRO)
 Lesson_7_1 : - Return Value Optimization (RVO)
 Lesson_7_1 : - inline functions
 Lesson_7_1 : - default parameters
+Lesson_7_1 : - constexpr functions
 
 /' ========== Scopes ========== '/
 Lesson_7_2 : - local scope
@@ -454,9 +494,9 @@ Lesson_13_1 : - C-style cast
 /' ========== Variables ========== '/
 Lesson_13_2 : - universal pointer
 Lesson_13_2 : - pointer to function
-Lesson_13_2 : - pointer to object method
 Lesson_13_2 : - memory ownership
 Lesson_13_2 : - memory ownership transfer
+Lesson_13_2 : - pointer arithmetic
 
 /' ========== Variables ========== '/
 Lesson_14 : - std::unique_ptr<>
@@ -536,6 +576,10 @@ Lesson_17_1 : - custom cbegin() and cend() method
 Lesson_17_1 : - custom rbegin() and rend() method
 
 /' ========== Variables ========== '/
+Lesson_17_2 : - class member pointer
+Lesson_17_2 : - class method pointer
+
+/' ========== Variables ========== '/
 Lesson_18 : - what const object implies for methods
 Lesson_18 : - const methods
 
@@ -546,6 +590,9 @@ Lesson_18_1 : - std::initializer_list
 Lesson_18_1 : - initializer list constructor
 Lesson_18_1 : - default parameters in constructors
 Lesson_18_1 : - multiple parametric constructors
+Lesson_18_1 : - private constructors
+Lesson_18_1 : - delegating object construction\n   to a static method
+Lesson_18_1 : - construction guards
 
 /' ========== Advanced const objects properties ========== '/
 Lesson_18_2 : - volatile members inside const objects
@@ -597,13 +644,22 @@ Lesson_20_3 : - using namespace
 Lesson_20_3 : - decltype
 
 /' ========== Variables ========== '/
+Lesson_20_4 : - creational patterns
+Lesson_20_4 : - structural patterns
+Lesson_20_4 : - behavioral patterns
+Lesson_20_4 : - singleton using static function
+
+/' ========== Variables ========== '/
 Lesson_21 : - exceptions
+Lesson_21 : - #include <stdexcept>
 Lesson_21 : - try / catch blocks
 
 /' ========== Variables ========== '/
 Lesson_21_1 : - static_assert
 Lesson_21_1 : - assert
 Lesson_21_1 : - noexcept
+Lesson_21_1 : - custom exceptions
+Lesson_21_1 : - different handling for\n   different exceptions
 
 /' ========== Variables ========== '/
 Lesson_22 : - teplates
@@ -615,6 +671,7 @@ Lesson_22 : - templates simplified with auto
 Lesson_22_1 : - decltype and return type\n   based on template parameters
 Lesson_22_1 : - variadic templates
 Lesson_22_1 : - parameter pack
+Lesson_22_1 : - caching using templates
 
 /' ========== Variables ========== '/
 Lesson_22_2 : - std::enable_if
@@ -622,11 +679,99 @@ Lesson_22_2 : - std::declval
 Lesson_22_2 : - type_traits library
 Lesson_22_2 : - CRTP - Curriously\n   Recurring Template Pattern
 Lesson_22_2 : - SFINAE - Substitution Failure\n   Is Not An Error
+Lesson_22_2 : - std::decay
+Lesson_22_2 : - concepts
 
 /' ========== Variables ========== '/
 Lesson_22_3 : - template rules regarding linking
 Lesson_22_3 : - template forward declarations
 Lesson_22_3 : - moving class template\n   method definitions to source files
 
+/' ========== Variables ========== '/
+Lesson_23 : - std::pair<>
+Lesson_23 : - std::tuple<>
+Lesson_23 : - std::make_tuple<>
+Lesson_23 : - std::tie
+Lesson_23 : - std::map<>
+Lesson_23 : - std::unordered_map<>
+Lesson_23 : - std::set<>
+Lesson_23 : - std::unordered_set<>
+Lesson_23 : - std::find
+Lesson_23 : - std::ranges::find
+
+/' ========== Variables ========== '/
+Lesson_23_1 : - chrono
+Lesson_23_1 : - random
+Lesson_23_1 : - iosfwd
+
+/' ========== Variables ========== '/
+Lesson_23_2 : - Boost::ASIO
+Lesson_23_2 : - Qt
+Lesson_23_2 : - OpenGL
+Lesson_23_2 : - Vulkan
+Lesson_23_2 : - CUDA
+Lesson_23_2 : - PhysX
+
+/' ========== Variables ========== '/
+Lesson_24 : - lambda
+Lesson_24 : - lambda capture block
+Lesson_24 : - lambda aggregate capture specifiers
+Lesson_24 : - std::find_if
+Lesson_24 : - std::ranges::find_if
+Lesson_24 : - std::ranges::remove_if
+Lesson_24 : - std::ranges::for_each
+Lesson_24 : - algorithm library
+
+/' ========== Variables ========== '/
+Lesson_24_1 : - function pointer
+Lesson_24_1 : - std::function<>
+Lesson_24_1 : - callbacks
+
+/' ========== Variables ========== '/
+Lesson_24_2 : - std::views<>
+Lesson_24_2 : - std::ranges::view<>
+Lesson_24_2 : - std::transform
+Lesson_24_2 : - std::filter
+Lesson_24_2 : - lazy evaluation
+
+/' ========== Variables ========== '/
+Lesson_25 : - threads
+Lesson_25 : - parallelism
+Lesson_25 : - concurrency
+
+/' ========== Variables ========== '/
+Lesson_25_1 : - thread priority
+Lesson_25_1 : - scheduler
+Lesson_25_1 : - preemption
+Lesson_25_1 : - thread blocking
+Lesson_25_1 : - thread yielding
+
+/' ========== Variables ========== '/
+Lesson_25_2 : - asynchronous operations
+Lesson_25_2 : - coroutines
+Lesson_25_2 : - ISR - Interrupt Service\n   Routine
+
+/' ========== Variables ========== '/
+Lesson_26 : - critical section
+Lesson_26 : - semaphore
+Lesson_26 : - mutex
+Lesson_26 : - scoped lock
+Lesson_26 : - blocking queue
+Lesson_26 : - polling
+
+/' ========== Variables ========== '/
+Lesson_26_1 : - atomic instructions
+Lesson_26_1 : - #include <atomic>
+Lesson_26_1 : - atomic types
+
+/' ========== Variables ========== '/
+Lesson_27 : - deadlock
+Lesson_27 : - thread starvation
+Lesson_27 : - race condition
+
+/' ========== Variables ========== '/
+Lesson_28 : - main function parameters
+Lesson_28 : - signal handler
+Lesson_28 : - system calls
 @enduml
 ```
