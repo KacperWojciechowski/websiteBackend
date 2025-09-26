@@ -27,12 +27,12 @@ state "5. Iterations" as Lesson_5 #YellowGreen
 state "4.2. Compile-time\nconditionals (*)" as Lesson_4_2
 
 
-state "7.2. Scopes" as Lesson_7_2 #YellowGreen
 state "6. Static arrays" as Lesson_6 #YellowGreen
 state "6.1. Advanced\nstatic arrays (*)" as Lesson_6_1
 
 state "7. Functions" as Lesson_7 #YellowGreen
 state "7.1. Advanced functions (*)" as Lesson_7_1
+state "7.2. Scopes" as Lesson_7_2 #YellowGreen
 state "7.3. Side effects (*)" as Lesson_7_3
 
 state "8. Splitting code into files" as Lesson_8 #YellowGreen
@@ -45,13 +45,13 @@ state "10. File operations" as Lesson_10 #YellowGreen
 state "10.1. Advanced file operations (*)" as Lesson_10_1
 state "11.3. Structure\nmemory concerns (*)" as Lesson_11_3
 
+state "11.1. Default values (*)" as Lesson_11_1
 state "11.2. Structure data\naccess (*)" as Lesson_11_2
 state "11. Structures" as Lesson_11 #YellowGreen
 state "9. Enumeration types" as Lesson_9 #YellowGreen
 state "9.1. In-depth enums (*)" as Lesson_9_1
 
 state "12. Namespaces" as Lesson_12 #YellowGreen
-state "11.1. Default values (*)" as Lesson_11_1
 state "11.4. In-depth look\ninto structures (*)" as Lesson_11_4
 state "12.1. Anonymous\nnamespaces (*)" as Lesson_12_1
 state "13. Access to original data" as Lesson_13 #YellowGreen
@@ -85,11 +85,16 @@ state "19.1. Multiple inheritance (*)" as Lesson_19_1
 state "19. Inheritance" as Lesson_19 #YellowGreen
 state "20. Polymorphism" as Lesson_20 #YellowGreen
 
+state "22.3. Templates vs codebase (*)" as Lesson_22_3
 state "21. Error handling" as Lesson_21 #YellowGreen
 state "21.1. Advanced\nerror\nhandling (*)" as Lesson_21_1
 state "20.1. Advanced\npolymorphism\nconcepts (*)" as Lesson_20_1
 state "20.2. Advanced operator\noverloading (*)" as Lesson_20_2
 state "20.3. Improving\nreadability (*)" as Lesson_20_3
+
+state "22. Templates" as Lesson_22 #YellowGreen
+state "22.1. Advanced template\nconcepts (*)" as Lesson_22_1
+state "22.2. Adaptive templates (*)" as Lesson_22_2
 
 /' ------------------------------ State connections ------------------------------'/
 
@@ -118,37 +123,37 @@ Lesson_4 -down[dashed]-> Lesson_4_2
 Lesson_5 -down-> Lesson_6
 
 Lesson_6 -down-> Lesson_7
-Lesson_6 -left[dashed]-> Lesson_6_1
+Lesson_6 -right[dashed]-> Lesson_6_1
 
 Lesson_7 -down-> Lesson_8
-Lesson_7 -right[dashed]-> Lesson_7_1
-Lesson_7 -left-> Lesson_7_2
-Lesson_7 -up[dashed]-> Lesson_7_3
+Lesson_7 -left[dashed]-> Lesson_7_1
+Lesson_7 -up-> Lesson_7_2
+Lesson_7 -right[dashed]-> Lesson_7_3
 
 Lesson_8 -down-> Lesson_9
-Lesson_8 -left[dashed]-> Lesson_8_1
-Lesson_8 -right[dashed]->Lesson_8_2
-Lesson_8 -down[dashed]->Lesson_8_3
+Lesson_8 -right[dashed]-> Lesson_8_1
+Lesson_8 -left[dashed]->Lesson_8_2
+Lesson_8 -left[dashed]->Lesson_8_3
 Lesson_8_1 -down[dashed]-> Lesson_8_1_1
 Lesson_8_1 -up[dashed]-> Lesson_8_1_2
 Lesson_8_1 -down[dashed]-> Lesson_8_1_3
-Lesson_8_1 -left[dashed]-> Lesson_8_1_4
+Lesson_8_1 -right[dashed]-> Lesson_8_1_4
 
 Lesson_9 -down-> Lesson_10
-Lesson_9 -right[dashed]-> Lesson_9_1
+Lesson_9 -left[dashed]-> Lesson_9_1
 
 Lesson_10 -down-> Lesson_11
-Lesson_10 -left[dashed]-> Lesson_10_1
+Lesson_10 -right[dashed]-> Lesson_10_1
 
 Lesson_11 -down-> Lesson_12
 Lesson_11 -down[dashed]-> Lesson_11_1
-Lesson_11 -down[dashed]-> Lesson_11_2
+Lesson_11 -up[dashed]-> Lesson_11_2
 Lesson_11 -left[dashed]-> Lesson_11_3
 Lesson_11 -right[dashed]-> Lesson_11_4
 Lesson_11 -right[dashed]-> Lesson_11_5
 
 Lesson_12 -down-> Lesson_13
-Lesson_12 -left[dashed]-> Lesson_12_1
+Lesson_12 -right[dashed]-> Lesson_12_1
 
 Lesson_13 -down->Lesson_14
 Lesson_13 -left[dashed]->Lesson_13_1
@@ -183,6 +188,10 @@ Lesson_20 -right[dashed]-> Lesson_20_3
 
 Lesson_21 -down-> Lesson_22
 Lesson_21 -left[dashed]-> Lesson_21_1
+
+Lesson_22 -right[dashed]->Lesson_22_1
+Lesson_22 -left[dashed]->Lesson_22_2
+Lesson_22 -down[dashed]->Lesson_22_3
 
 /' ------------------------------ Content of the lessons ------------------------------'/
 
@@ -595,5 +604,29 @@ Lesson_21 : - try / catch blocks
 Lesson_21_1 : - static_assert
 Lesson_21_1 : - assert
 Lesson_21_1 : - noexcept
+
+/' ========== Variables ========== '/
+Lesson_22 : - teplates
+Lesson_22 : - template full specialization
+Lesson_22 : - template partial specialization
+Lesson_22 : - templates simplified with auto
+
+/' ========== Variables ========== '/
+Lesson_22_1 : - decltype and return type\n   based on template parameters
+Lesson_22_1 : - variadic templates
+Lesson_22_1 : - parameter pack
+
+/' ========== Variables ========== '/
+Lesson_22_2 : - std::enable_if
+Lesson_22_2 : - std::declval
+Lesson_22_2 : - type_traits library
+Lesson_22_2 : - CRTP - Curriously\n   Recurring Template Pattern
+Lesson_22_2 : - SFINAE - Substitution Failure\n   Is Not An Error
+
+/' ========== Variables ========== '/
+Lesson_22_3 : - template rules regarding linking
+Lesson_22_3 : - template forward declarations
+Lesson_22_3 : - moving class template\n   method definitions to source files
+
 @enduml
 ```
