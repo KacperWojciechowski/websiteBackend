@@ -86,11 +86,11 @@ state "19.1. Multiple inheritance (*)" as Lesson_19_1
 state "19. Inheritance" as Lesson_19 #YellowGreen
 state "20. Polymorphism" as Lesson_20 #YellowGreen
 
-state "21. Error handling" as Lesson_21 #YellowGreen
 state "21.1. Advanced\nerror handling (*)" as Lesson_21_1
 state "20.1. Advanced\npolymorphism\nconcepts (*)" as Lesson_20_1
 state "20.2. Advanced operator\noverloading (*)" as Lesson_20_2
 state "20.3. Improving\nreadability (*)" as Lesson_20_3
+state "21. Error handling" as Lesson_21 #YellowGreen
 state "20.4. Design Patterns" as Lesson_20_4 #YellowGreen
 
 state "22. Templates" as Lesson_22 #YellowGreen
@@ -112,9 +112,7 @@ state "26. Sharing resources\nbetween threads" as Lesson_26 #YellowGreen
 state "26.1. Synchronized types (*)" as Lesson_26_1
 
 state "27. Resolving problems\nwith concurrency" as Lesson_27 #YellowGreen
-
-state "28. Interacting with the OS" as Lesson_28 #YellowGreen
-
+state "27.1. Interacting with the OS" as Lesson_27_1
 
 /' ------------------------------ State connections ------------------------------'/
 
@@ -206,14 +204,15 @@ Lesson_20 -down-> Lesson_21
 Lesson_20 -right[dashed]-> Lesson_20_1
 Lesson_20 -left[dashed]-> Lesson_20_2
 Lesson_20 -right[dashed]-> Lesson_20_3
+Lesson_20 -down-> Lesson_20_4
 
 Lesson_21 -down-> Lesson_22
-Lesson_21 -left[dashed]-> Lesson_21_1
+Lesson_21 -right[dashed]-> Lesson_21_1
 
 Lesson_22 -down->Lesson_23
-Lesson_22 -down[dashed]-> Lesson_22_1
+Lesson_22 -right[dashed]-> Lesson_22_1
 Lesson_22 -left[dashed]-> Lesson_22_2
-Lesson_22 -right[dashed]-> Lesson_22_3
+Lesson_22 -up[dashed]-> Lesson_22_3
 
 Lesson_23 -down-> Lesson_24
 Lesson_23 -right[dashed]-> Lesson_23_1
@@ -230,7 +229,7 @@ Lesson_25 -right-> Lesson_25_2
 Lesson_26 -down-> Lesson_27
 Lesson_26 -right[dashed]->Lesson_26_1
 
-Lesson_27 -down-> Lesson_28
+Lesson_27 -left[dashed]-> Lesson_27_1
 
 /' ------------------------------ Content of the lessons ------------------------------'/
 
@@ -770,8 +769,9 @@ Lesson_27 : - thread starvation
 Lesson_27 : - race condition
 
 /' ========== Variables ========== '/
-Lesson_28 : - main function parameters
-Lesson_28 : - signal handler
-Lesson_28 : - system calls
+Lesson_27_1 : - main function parameters
+Lesson_27_1 : - signal handler
+Lesson_27_1 : - system calls
+Lesson_27_1 : - thread vs process
 @enduml
 ```
