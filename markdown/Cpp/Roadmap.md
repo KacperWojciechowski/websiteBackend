@@ -1,118 +1,145 @@
 # C++ Roadmap
 
+## Overview
+
+This roadmap was crafted with the intent to craft a comprehensive path for learning C++ language in the most user-friendly manner. As such, the main component of this roadmap is the ***core path*** marked with the *green* color, that leads the reader through all the necessary, fundamental features of the language while limiting the amount of concepts and caveats to grasp.
+
+As for the fact that many of the functionalities moved off of the *core path* are widely utilized and really helpful in most of the more advanced projects, they had been grouped into subjects that could be evaluated in terms of difficulty, and branch off of their related *core path* topic.
+
+## Intended approach for the reader
+
+In order to make the best out of this roadmap. it is recommended to:
+
+1. First go through the entire ***core path*** of the roadmap, marked with the *green* color;
+2. Introduce topics marked by the *khaki* color;
+3. Introduce topics marked by the *orange* color;
+4. Introduce topics marked by the *red* color;
+
+The increase in difficulty as per the above list inversely correlates with the frequency at which those features are used in typical projects. This suggests that going up the difficulty chain gradually also promises the biggest skill increase with the least investment.
+
+As real-life software projects vary vastly depending on their application, it must be stated that the priority of features for each and every reader might be different, and you may need to jump around the difficulty chain as need be.
+
+## Roadmap
+
 ```plantuml
 @startuml
 
+legend top left
+|= Color |= Difficulty |
+|<back:#MediumSeaGreen>            </back>| Core Path |
+|<back:#Khaki>            </back>| Intermediate |
+|<back:#Orange>            </back>| Advanced |
+|<back:#IndianRed>            </back>| Very Advanced |
+end legend
 /' ------------------------------ Lessons declaration ------------------------------ '/
 
-state "1. Basic program" as Lesson_1 #YellowGreen
-state "2. Variables" as Lesson_2 #YellowGreen
-state "2.1. In-depth primitive\ndata types (*)" as Lesson_2_1 #LightYellow
-state "2.2. Type\nconversion (*)" as Lesson_2_2
-state "2.3. Literals (*)" as Lesson_2_3
-state "2.3.1. Escape characters (*)" as Lesson_2_3_1
-state "2.3.2. Type deduction (*)" as Lesson_2_3_2
-state "2.4. Strings" as Lesson_2_4 #YellowGreen
-state "2.5. Advanced\noutput (*)" as Lesson_2_5
-state "2.4.1. String\nsearching (*)" as Lesson_2_4_1
-state "2.4.2. String\nmodification (*)" as Lesson_2_4_2
-state "3. Basic math" as Lesson_3 #YellowGreen
-state "2.6. Compile-time\nevaluation (*)" as Lesson_2_6
+state "1. Basic program" as Lesson_1 #MediumSeaGreen
+state "2. Variables" as Lesson_2 #MediumSeaGreen
+state "2.1. In-depth primitive\ndata types (*)" as Lesson_2_1 #Khaki
+state "2.2. Type\nconversion (*)" as Lesson_2_2 #Khaki
+state "2.3. Literals (*)" as Lesson_2_3 #Khaki
+state "2.3.1. Escape characters (*)" as Lesson_2_3_1 #Khaki
+state "2.3.2. Type deduction (*)" as Lesson_2_3_2 #Orange
+state "2.4. Strings" as Lesson_2_4 #MediumSeaGreen
+state "2.5. Advanced\noutput (*)" as Lesson_2_5 #Khaki
+state "2.4.1. String\nsearching (*)" as Lesson_2_4_1 #Orange
+state "2.4.2. String\nmodification (*)" as Lesson_2_4_2 #Khaki
+state "3. Basic math" as Lesson_3 #MediumSeaGreen
+state "2.6. Compile-time\nevaluation (*)" as Lesson_2_6 #Orange
 
 
-state "3.1. Advanced\nfloating-point (*)" as Lesson_3_1
-state "4. Conditionals" as Lesson_4 #YellowGreen
-state "4.1. Implicit bool\nconversions (*)" as Lesson_4_1
-state "5. Iterations" as Lesson_5 #YellowGreen
-state "4.2. Compile-time\nconditionals (*)" as Lesson_4_2
+state "3.1. Advanced\nfloating-point (*)" as Lesson_3_1 #IndianRed
+state "4. Conditionals" as Lesson_4 #MediumSeaGreen
+state "4.1. Implicit bool\nconversions (*)" as Lesson_4_1 #Khaki
+state "5. Iterations" as Lesson_5 #MediumSeaGreen
+state "4.2. Compile-time\nconditionals (*)" as Lesson_4_2 #IndianRed
 
 
-state "6. Static arrays" as Lesson_6 #YellowGreen
-state "6.1. Advanced\nstatic arrays (*)" as Lesson_6_1
+state "6. Static arrays" as Lesson_6 #MediumSeaGreen
+state "6.1. Advanced\nstatic arrays (*)" as Lesson_6_1 #Khaki
 
-state "7. Functions" as Lesson_7 #YellowGreen
-state "7.1. Advanced functions (*)" as Lesson_7_1
-state "7.2. Scopes" as Lesson_7_2 #YellowGreen
-state "7.3. Side effects (*)" as Lesson_7_3
+state "7. Functions" as Lesson_7 #MediumSeaGreen
+state "7.1. Advanced functions (*)" as Lesson_7_1 #Orange
+state "7.2. Scopes" as Lesson_7_2 #MediumSeaGreen
+state "7.3. Side effects (*)" as Lesson_7_3 #IndianRed
 
-state "8. Splitting code into files" as Lesson_8 #YellowGreen
-state "8.1. In-depth codebase\nstructure (*)" as Lesson_8_1
-state "8.1.1. External\nlibraries (*)" as Lesson_8_1_1
-state "8.1.2. Linking errors (*)" as Lesson_8_1_2
-state "8.2. Macros (*)" as Lesson_8_2
+state "8. Splitting code into files" as Lesson_8 #MediumSeaGreen
+state "8.1. In-depth codebase\nstructure (*)" as Lesson_8_1 #Khaki
+state "8.1.1. External\nlibraries (*)" as Lesson_8_1_1 #IndianRed
+state "8.1.2. Linking errors (*)" as Lesson_8_1_2 #Orange
+state "8.2. Macros (*)" as Lesson_8_2 #Orange
 
-state "10. File operations" as Lesson_10 #YellowGreen
-state "10.1. Advanced file operations (*)" as Lesson_10_1
-state "11.3. Structure\nmemory concerns (*)" as Lesson_11_3
+state "10. File operations" as Lesson_10 #MediumSeaGreen
+state "10.1. Advanced file operations (*)" as Lesson_10_1 #Orange
+state "11.3. Structure\nmemory concerns (*)" as Lesson_11_3 #Orange
 
-state "11.2. Structure data\naccess (*)" as Lesson_11_2
-state "11. Structures" as Lesson_11 #YellowGreen
-state "9. Enumeration types" as Lesson_9 #YellowGreen
-state "9.1. In-depth enums (*)" as Lesson_9_1
+state "11.2. Structure data\naccess (*)" as Lesson_11_2 #Khaki
+state "11. Structures" as Lesson_11 #MediumSeaGreen
+state "9. Enumeration types" as Lesson_9 #MediumSeaGreen
+state "9.1. In-depth enums (*)" as Lesson_9_1 #Khaki
 
-state "12. Namespaces" as Lesson_12 #YellowGreen
-state "11.1. Default values (*)" as Lesson_11_1
-state "11.4. In-depth look\ninto structures (*)" as Lesson_11_4
-state "12.1. Anonymous\nnamespaces (*)" as Lesson_12_1
-state "13. Access to original data" as Lesson_13 #YellowGreen
+state "12. Namespaces" as Lesson_12 #MediumSeaGreen
+state "11.1. Default values (*)" as Lesson_11_1 #Khaki
+state "11.4. In-depth look\ninto structures (*)" as Lesson_11_4 #Khaki
+state "12.1. Anonymous\nnamespaces (*)" as Lesson_12_1 #Khaki
+state "13. Access to original data" as Lesson_13 #MediumSeaGreen
 
 
-state "13.1. Conversions\nof pointers (*)" as Lesson_13_1
-state "14. Dynamic allocation" as Lesson_14 #YellowGreen
-state "13.2. Advanced pointers (*)" as Lesson_13_2
+state "13.1. Conversions\nof pointers (*)" as Lesson_13_1 #Orange
+state "14. Dynamic allocation" as Lesson_14 #MediumSeaGreen
+state "13.2. Advanced pointers (*)" as Lesson_13_2 #Khaki
 
-state "14.1. Memory model (*)" as Lesson_14_1
-state "14.2. Iterators (*)" as Lesson_14_2
-state "14.3. Advanced memory\nmanagement (*)" as Lesson_14_3
-state "8.1.3. Managing compiler\noptimizations (*)" as Lesson_8_1_3
-state "8.1.4. Integration\nwith C code (*)" as Lesson_8_1_4
-state "8.3. Modules (*)" as Lesson_8_3
-state "11.5. Unions (*)" as Lesson_11_5
-state "15.1. Leveraging compiler\nmethod generation (*)" as Lesson_15_1
-state "15. Object Oriented\nProgramming Basics" as Lesson_15 #YellowGreen
-state "14.4. Optional values (*)" as Lesson_14_4
-state "16. OOP Data Management\nConcepts" as Lesson_16 #YellowGreen
-state "15.2. Class performance optimization (*)" as Lesson_15_2
+state "14.1. Memory model (*)" as Lesson_14_1 #Orange
+state "14.2. Iterators (*)" as Lesson_14_2 #Khaki
+state "14.3. Advanced memory\nmanagement (*)" as Lesson_14_3 #IndianRed
+state "8.1.3. Managing compiler\noptimizations (*)" as Lesson_8_1_3 #IndianRed
+state "8.1.4. Integration\nwith C code (*)" as Lesson_8_1_4 #IndianRed
+state "8.3. Modules (*)" as Lesson_8_3 #IndianRed
+state "11.5. Unions (*)" as Lesson_11_5 #Orange
+state "15.1. Leveraging compiler\nmethod generation (*)" as Lesson_15_1 #Orange
+state "15. Object Oriented\nProgramming Basics" as Lesson_15 #MediumSeaGreen
+state "14.4. Optional values (*)" as Lesson_14_4 #Khaki
+state "16. OOP Data Management\nConcepts" as Lesson_16 #MediumSeaGreen
+state "15.2. Class performance optimization (*)" as Lesson_15_2 #Orange
 
-state "17. Advanced access\nof class contents" as Lesson_17 #YellowGreen
-state "17.1. Making class compliant\nwith advanced language\nfeatures (*)" as Lesson_17_1
-state "17.2. Memory access to class content (*)" as Lesson_17_2
+state "17. Advanced access\nof class contents" as Lesson_17 #MediumSeaGreen
+state "17.1. Making class compliant\nwith advanced language\nfeatures (*)" as Lesson_17_1 #IndianRed
+state "17.2. Memory access to class content (*)" as Lesson_17_2 #IndianRed
 
-state "18. Const-suitable classes" as Lesson_18 #YellowGreen
-state "18.1. Advanced object\nconstruction (*)" as Lesson_18_1
-state "18.2. Advanced const object\nproperties (*)" as Lesson_18_2
+state "18. Const-suitable classes" as Lesson_18 #MediumSeaGreen
+state "18.1. Advanced object\nconstruction (*)" as Lesson_18_1 #Orange
+state "18.2. Advanced const object\nproperties (*)" as Lesson_18_2 #IndianRed
+state "19.1. Multiple inheritance (*)" as Lesson_19_1 #Orange
+state "19. Inheritance" as Lesson_19 #MediumSeaGreen
+state "20. Polymorphism" as Lesson_20 #MediumSeaGreen
 
-state "19.1. Multiple inheritance (*)" as Lesson_19_1
-state "19. Inheritance" as Lesson_19 #YellowGreen
-state "20. Polymorphism" as Lesson_20 #YellowGreen
+state "21.1. Advanced\nerror handling (*)" as Lesson_21_1 #Orange
+state "20.1. Advanced\npolymorphism\nconcepts (*)" as Lesson_20_1 #IndianRed
+state "20.2. Advanced operator\noverloading (*)" as Lesson_20_2 #IndianRed
+state "20.3. Improving\nreadability (*)" as Lesson_20_3 #Khaki
+state "21. Error handling" as Lesson_21 #MediumSeaGreen
+state "20.4. Design Patterns" as Lesson_20_4 #MediumSeaGreen
 
-state "21.1. Advanced\nerror handling (*)" as Lesson_21_1
-state "20.1. Advanced\npolymorphism\nconcepts (*)" as Lesson_20_1
-state "20.2. Advanced operator\noverloading (*)" as Lesson_20_2
-state "20.3. Improving\nreadability (*)" as Lesson_20_3
-state "21. Error handling" as Lesson_21 #YellowGreen
-state "20.4. Design Patterns" as Lesson_20_4 #YellowGreen
+state "22. Templates" as Lesson_22 #MediumSeaGreen
+state "22.1. Advanced template\nconcepts (*)" as Lesson_22_1 #Orange
+state "22.2. Adaptive templates (*)" as Lesson_22_2 #IndianRed
+state "22.3. Templates vs codebase (*)" as Lesson_22_3 #IndianRed
 
-state "22. Templates" as Lesson_22 #YellowGreen
-state "22.1. Advanced template\nconcepts (*)" as Lesson_22_1
-state "22.2. Adaptive templates (*)" as Lesson_22_2
-state "22.3. Templates vs codebase (*)" as Lesson_22_3
+state "23. STL - Standard Template Library" as Lesson_23 #MediumSeaGreen
+state "23.1. Useful\nstandard libraries (*)" as Lesson_23_1 #Khaki
+state "23.2. Popular\nthird-party libraries (*)" as Lesson_23_2 #Orange
+state "24. Lambdas and\nHigher Order Functions" as Lesson_24 #MediumSeaGreen
+state "24.1. Storing functions (*)" as Lesson_24_1 #Khaki
+state "24.2. Transforming data (*)" as Lesson_24_2 #Orange
 
-state "23. STL - Standard Template Library" as Lesson_23 #YellowGreen
-state "23.1. Useful\nstandard libraries (*)" as Lesson_23_1
-state "23.2. Popular\nthird-party libraries (*)" as Lesson_23_2
-state "24. Lambdas and\nHigher Order Functions" as Lesson_24 #YellowGreen
-state "24.1. Storing functions (*)" as Lesson_24_1
-state "24.2. Transforming data (*)" as Lesson_24_2
+state "25. Concurrency" as Lesson_25 #MediumSeaGreen
+state "25.1. In-depth concurrency" as Lesson_25_1 #MediumSeaGreen
+state "25.2. Asynchronous programming" as Lesson_25_2 #MediumSeaGreen
+state "26. Sharing resources\nbetween threads" as Lesson_26 #MediumSeaGreen
+state "26.1. Synchronized types (*)" as Lesson_26_1 #Orange
 
-state "25. Concurrency" as Lesson_25 #YellowGreen
-state "25.1. In-depth concurrency" as Lesson_25_1 #YellowGreen
-state "25.2. Asynchronous programming" as Lesson_25_2 #YellowGreen
-state "26. Sharing resources\nbetween threads" as Lesson_26 #YellowGreen
-state "26.1. Synchronized types (*)" as Lesson_26_1
-
-state "27. Resolving problems\nwith concurrency" as Lesson_27 #YellowGreen
-state "27.1. Interacting with the OS" as Lesson_27_1
+state "27. Resolving problems\nwith concurrency" as Lesson_27 #MediumSeaGreen
+state "27.1. Interacting with the OS" as Lesson_27_1 #IndianRed
 
 /' ------------------------------ State connections ------------------------------'/
 
@@ -443,6 +470,7 @@ Lesson_11 : - structures
 Lesson_11 : - nesting structures
 Lesson_11 : - brace initialization
 Lesson_11 : - brace initialization with\n   explicit field names
+Lesson_11 : - dot operator
 
 /' ========== Default values ========== '/
 Lesson_11_1 : - default field values
@@ -452,7 +480,6 @@ Lesson_11_1 : - brace initialization vs\n   default values
 Lesson_11_2 : - aggregates
 Lesson_11_2 : - structure methods
 Lesson_11_2 : - structured binding
-Lesson_11_2 : - dot operator
 
 /' ========== Structure memory concerns ========== '/
 Lesson_11_3 : - memory alignment
