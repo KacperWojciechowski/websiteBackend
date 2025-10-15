@@ -1,10 +1,10 @@
-# Grover algorithm
+# === Grover algorithm
 
-## Definition
+## --- Definition
 
 Grover algorithm is a quantum procedure for checking ***the presence of a key in a database*** without determined structure. Each element is enumerated from $0$ to $2^n-1$, where $n$ is the number of used qubits. The ***number of tries*** for the Grover algorithm is given as $O(\sqrt{2^n})$.
 
-## Algorithm
+## --- Algorithm
 
 Let's assume that a quantum register consisting of $n$ qubits is set to superposition state $(N=2^n)$.
 
@@ -41,7 +41,7 @@ where $|i_{U_f}\rangle$ is the amplitude pointed to by the $U_f$ operator. Proba
 
 5. Repeating steps 3 and 4 will amplify the amplitude, however after a certain number of iterations, it will return to the initial value;
 
-## Example
+## --- Example
 Example of amplifying the amplitude of the $|1010\rangle$ key, with $n=4$:
 
 ```plantuml

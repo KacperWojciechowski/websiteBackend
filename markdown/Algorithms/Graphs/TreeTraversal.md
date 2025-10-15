@@ -1,10 +1,10 @@
-# Tree traversal
+# === Tree traversal
 
 TODO - make the code and diagram display side-by-side
 
-## Inorder
+## --- Inorder
 
-### Algorithm
+### ::: Algorithm
 ```cpp
 traverseInorder(root) {
     if (not root) {
@@ -15,7 +15,7 @@ traverseInorder(root) {
     traverseInorder(root->right);
 }
 ```
-### Order of tree exploration
+### ::: Order of tree exploration
 
 ```plantuml
 skinparam componentStyle rectangle
@@ -35,8 +35,8 @@ D -- F
 D -- G
 ```
 
-## Preorder
-### Algorithm
+## --- Preorder
+### ::: Algorithm
 ```cpp
 traversePreorder(root) {
     if (not root) {
@@ -47,7 +47,7 @@ traversePreorder(root) {
     traversePreorder(root->right);
 }
 ```
-### Order of tree exploration
+### ::: Order of tree exploration
 
 ```plantuml
 skinparam componentStyle rectangle
@@ -67,8 +67,8 @@ D -- F
 D -- G
 ```
 
-## Postorder
-### Algorithm
+## --- Postorder
+### ::: Algorithm
 ```cpp
 traversePostorder(root) {
     if (not root) {
@@ -79,7 +79,7 @@ traversePostorder(root) {
     traversePostorder(root->left);
 }
 ```
-### Order of tree exploration
+### ::: Order of tree exploration
 
 ```plantuml
 skinparam componentStyle rectangle
@@ -99,9 +99,9 @@ D -- F
 D -- G
 ```
 
-## Max path sum in a binary tree
+## --- Max path sum in a binary tree
 
-### Algorithm
+### ::: Algorithm
 ```cpp
 maxPathSum(root) {
     sum = 0;
@@ -124,7 +124,7 @@ calculateMaxPathSum(root, sum) {
 }
 ```
 
-### Order of tree exploration
+### ::: Order of tree exploration
 
 ```plantuml
 skinparam componentStyle rectangle

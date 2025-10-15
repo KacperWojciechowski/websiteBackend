@@ -1,3 +1,3 @@
-# Newton method
+# === Newton method
 
 TODO

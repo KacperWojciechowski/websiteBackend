@@ -1,9 +1,9 @@
-# Finding container permutations
+# === Finding container permutations
 
-## Complexity class
+## --- Complexity class
 - Time complexity $O(n!)$
 
-## Algorithm
+## --- Algorithm
 
 ```cpp
 findPermutation(container, left, right) {

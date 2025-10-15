@@ -1,6 +1,6 @@
-# Newton's polynomial interpolation
+# === Newton's polynomial interpolation
 
-## General form
+## --- General form
 
 \[
 \begin{equation}
@@ -24,7 +24,7 @@ where:
 
 The $w_n(x)$ term is called a ***Newton basis***, and it is defined for $j > 0$ and $w_0(x) \equiv 0$.
 
-### Calculating $a$ coefficients
+## --- Calculating $a$ coefficients
 
 In order to determine the values of the $a$ coefficients using the matrix method, we need to solve the ***lower triangular matrix*** of the matrix representation of a polynomial equation.
 

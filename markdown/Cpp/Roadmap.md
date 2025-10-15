@@ -1,12 +1,12 @@
-# C++ Roadmap
+# === C++ Roadmap
 
-## Overview
+## --- Overview
 
 This roadmap was crafted with the intent to craft a comprehensive path for learning C++ language in the most user-friendly manner. As such, the main component of this roadmap is the ***core path*** marked with the *green* color, that leads the reader through all the necessary, fundamental features of the language while limiting the amount of concepts and caveats to grasp.
 
 As for the fact that many of the functionalities moved off of the *core path* are widely utilized and really helpful in most of the more advanced projects, they had been grouped into subjects that could be evaluated in terms of difficulty, and branch off of their related *core path* topic.
 
-## Intended approach for the reader
+## --- Intended approach for the reader
 
 In order to make the best out of this roadmap. it is recommended to:
 
@@ -19,7 +19,7 @@ The increase in difficulty as per the above list inversely correlates with the f
 
 As real-life software projects vary vastly depending on their application, it must be stated that the priority of features for each and every reader might be different, and you may need to jump around the difficulty chain as need be.
 
-## Roadmap
+## --- Roadmap
 
 ```plantuml
 @startuml

@@ -1,1 +1,1 @@
-# Gauss-Jordan algorithm
+# === Gauss-Jordan algorithm

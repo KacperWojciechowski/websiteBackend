@@ -1,5 +1,5 @@
-# Bisection method
-## Minimal number of iterations guaranteeing given error $\varepsilon$ in the bisection method
+# === Bisection method
+## --- Minimal number of iterations guaranteeing given error $\varepsilon$ in the bisection method
 
 \[
 \Delta = | \alpha - c_n | \le \frac{1}{2^n}(b-a) \\
@@ -25,6 +25,6 @@ where:
 - $\varepsilon$ - given value of rounding error
 - $\langle a;b \rangle$ - range for searching for the root of the characteristic polynomial
 
-## Bisection method algorithm
+## --- Bisection method algorithm
 
 TODO

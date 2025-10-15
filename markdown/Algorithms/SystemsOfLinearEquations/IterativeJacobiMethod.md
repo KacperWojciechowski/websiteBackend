@@ -1,5 +1,5 @@
-# Iterative Jacobi method
-## Algorithm
+# === Iterative Jacobi method
+## --- Algorithm
 
 1. Describe the system of equations in a matrix form $Ax = B$;
 2. Decompose $A$ into $A = D+R$, where $D$ contains only ***diagonal*** elements and $R$ contains ***all remaining*** elements;

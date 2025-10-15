@@ -1,6 +1,6 @@
-# Inverse matrix method
+# === Inverse matrix method
 
-## Algorithm
+## --- Algorithm
 
 1. Describe the system of equation in a matrix form $Ax=B$;
 2. Calculate the inverse matrix $A^{-1}$ (typically using ***Gaussian eleminitation*** method due to numeric stability)

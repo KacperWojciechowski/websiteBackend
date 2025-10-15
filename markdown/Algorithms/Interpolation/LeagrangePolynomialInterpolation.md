@@ -1,6 +1,6 @@
-# LaGrange's polynomial interpolation
+# === LaGrange's polynomial interpolation
 
-## General form
+## --- General form
 
 \[
 \begin{equation}

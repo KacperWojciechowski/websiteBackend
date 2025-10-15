@@ -1,4 +1,4 @@
-# Polynomial Approximation
+# === Polynomial Approximation
 
 If we have a function $f(x)$ which equation is known, we can create an ***N-th degree polynomial approximation*** using the following formula:
 

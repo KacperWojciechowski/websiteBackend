@@ -1,6 +1,6 @@
-# Linear interpolation
+# === Linear interpolation
 
-## Interpolating two points
+## --- Interpolating two points
 
 Having two points $P_0$ and $P_1$:
 
@@ -20,6 +20,6 @@ Having two points $P_0$ and $P_1$:
 \end{equation}
 \]
 
-## Interpolating multiple points
+## --- Interpolating multiple points
 
 In case of interpolating more than two points, a spline function is created, consisting of linear interpolations of each of the pairs of adjacent points.

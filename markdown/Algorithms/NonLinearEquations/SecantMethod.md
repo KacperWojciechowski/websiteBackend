@@ -1,3 +1,3 @@
-# Secant method
+# === Secant method
 
 TODO

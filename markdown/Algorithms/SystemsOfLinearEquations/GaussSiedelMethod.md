@@ -1,3 +1,3 @@
-# Gauss-Siedel method
+# === Gauss-Siedel method
 
 TODO

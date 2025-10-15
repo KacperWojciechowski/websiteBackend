@@ -1,4 +1,4 @@
-# Trigonometric polynomial approximation
+# === Trigonometric polynomial approximation
 
 1. Zero-fill $N$-element vectors of $a$ and $b$ coefficients;
 2. Repeat $N$ times:

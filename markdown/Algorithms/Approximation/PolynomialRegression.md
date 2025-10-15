@@ -1,4 +1,4 @@
-# Polynomial regression
+# === Polynomial regression
 
 It's a technique of regression analysis, where we know a set of values $x$ and their corresponding values $f(x)$ (a.k.a. $y$), but we don't know the equation for $f(x)$ and we try to approximate it using ***a polynomial***. This approach is typically used for modeling ***non-linear relations*** within data.
 

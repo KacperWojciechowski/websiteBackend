@@ -1,6 +1,6 @@
-# Trigonometric interpolation
+# === Trigonometric interpolation
 
-## General formula
+## --- General formula
 
 A trigonometric polynomial of $N$-th degree takes form:
 
@@ -52,7 +52,7 @@ As such, the problem is reduced to ***polynomial interpolation on unit circle***
 
 The interpolation polynomial is ***unique*** if and only if the number of adjustable coefficients is equal to the number of data points $K=2N+1$.
 
-## Formula for odd number of points
+## --- Formula for odd number of points
 
 If the number of $K$ ***is odd*** ($K = 2N+1$), applying *Lagrange's formula for polynomial interpolation* to the complex plane form of the problem results in:
 
@@ -88,7 +88,7 @@ The formula can be written as folows:
 \end{equation}
 \]
 
-## Formula for even number of points
+## --- Formula for even number of points
 
 If the number of points $K$ ***is even*** ($K = 2N$), applying *Lagrange's formula* results in the following equation:
 
@@ -124,7 +124,7 @@ This results in the following formula:
 \end{equation}
 \]
 
-## Final interpolation equations
+## --- Final interpolation equations
 
 That's how we end up with the following interpolation equations:
 

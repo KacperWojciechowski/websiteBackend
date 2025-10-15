@@ -1,6 +1,6 @@
-# Boost::MSM library
+# === Boost::MSM library
 
-## Overview of an msm structure
+## --- Overview of an msm structure
 
 ```plantuml
 state FSM {
@@ -61,7 +61,7 @@ where:
 - ***None*** - no guard, making the transition **default** and always available. The default transition executes only where no transition that has a guard is possible;
 - ***Event*** - event triggering guard check and transition between states;
 
-## States
+## --- States
 
 - `boost::msm` allows for using other FSMs as states, so they can be used to split the translation units (hence improving the compilation) or to create an orthogonal region state;
 - Splitting a big FSM into several smaller state-FSMs allows for increased readability and easier static analysis;
@@ -77,7 +77,7 @@ void on_exit(const Event&, FSM&)
 
 - Final state needs to inherit after `boost::msm::front::terminate_state<>` and implements only the `on_entry()` method;
 
-## Guards
+## --- Guards
 
 - Guard is a functor (structure with `operator()` implemented) that does not inherit after anything, but instead implements this particular method:
 
@@ -90,7 +90,7 @@ bool operator()(const Event&, FSM&, Source&, Target&)
 - Guard can be implement as a sub-structure within the state structure scope;
 - Guards for all transitions associated with given state must be **mutually exclusive**;
 
-## Actions
+## --- Actions
 
 - Action is a functor that does not inherit after anything, but instead implements this particular method:
 
@@ -101,7 +101,7 @@ void operator()(const Event&, FSM&, Source&, Target&)
 ```
 - Action can be implemented as a sub-structure within the state structure scope;
 
-## Transition subroutine call order
+## --- Transition subroutine call order
 
 ```plantuml
 start
@@ -135,7 +135,7 @@ stop
 end if
 ```
 
-## In-code notation for the MSM
+## --- In-code notation for the MSM
 
 ```cpp
 boost::mpl::vector<
@@ -145,15 +145,15 @@ boost::mpl::vector<
     >;
 ```
 
-## Orthogonal regions
+## --- Orthogonal regions
 
-### Information
+### ::: Information
 
 - `boost::msm` supports **orthogonal regions** in terms of the entire FSM;
 - Orthogonal regions allow the FSM to have two parallel states simultaneously, that share event reception;
 - Orthogonal regions can be used for processing asynchronous / parallel procedures, and for error handling (since it can be made in a way that captures any `throw` from the states and subroutines of the primary region);
 
-### Example
+### ::: Example
 
 ```plantuml
 [*] -down-> FSM

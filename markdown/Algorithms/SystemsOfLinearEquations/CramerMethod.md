@@ -1,6 +1,6 @@
-# Cramer method
+# === Cramer method
 
-## Algorithm
+## --- Algorithm
 
 1. Describe the system of equations in a matrix form $Ax = B$;
 2. If the ***determinant*** of the $A$ matrix is different than $0$:

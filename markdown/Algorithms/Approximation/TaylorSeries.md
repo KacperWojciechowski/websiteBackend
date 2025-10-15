@@ -1,9 +1,9 @@
-# Taylor series
+# === Taylor series
 
 TODO
 
-# Taylor expansion of $\sin(x)$
-## Equation
+# === Taylor expansion of $\sin(x)$
+## --- Equation
 
 Expanding $\sin(x)$ function using Taylor series takes form of:
 
@@ -26,7 +26,7 @@ where:
 
 For low values of $x$ ($x < 1$) it can be approximated that the value of $\sin(x) \approx x$
 
-## Approximation error
+## --- Approximation error
 
 - Absolute error
 
@@ -46,6 +46,6 @@ For low values of $x$ ($x < 1$) it can be approximated that the value of $\sin(x
 
 The absolute error is characterized by similarity to a parabolic function. The relative error for a single term resembles of a $\tan$ function graph, and with increasing number of terms starts to resemble a linear function. 
 
-# Taylor expansion of $\cos(x)$
+# === Taylor expansion of $\cos(x)$
 
 TODO

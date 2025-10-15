@@ -1,3 +1,3 @@
-# Fixed point method
+# === Fixed point method
 
 TODO
